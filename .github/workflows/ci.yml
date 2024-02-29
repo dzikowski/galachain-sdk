@@ -10,6 +10,9 @@ jobs:
     name: CI
     runs-on: ubuntu-22.04
     steps:
+      - name: Verify Docker
+        run: |
+          docker run alpine pwd
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install jq
